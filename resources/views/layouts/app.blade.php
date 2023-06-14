@@ -12,12 +12,12 @@
     <title>{{ $global["app_name"] }}</title>
 
     <!-- Custom fonts for this template-->
-	<link rel="icon" type="image/png" href="{{ "/app_icon/".$global["app_icon"] }}"/>
-    <link href="/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="{{ "/krt/public/app_icon/".$global["app_icon"] }}"/>
+    <link href="/krt/public/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template-->
-    <link href="/admin/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/krt/public/admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/krt/public/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route("dashboard") }}">
                 <div class="sidebar-brand-icon">
-                    <img src="{{ "/app_logo/".$global["app_logo"] }}" alt="app_logo" title="app_logo" width="70" height="70">
+                    <img src="{{ "/krt/public/app_logo/".$global["app_logo"] }}" alt="app_logo" title="app_logo" width="70" height="70">
                 </div>
                 <div class="sidebar-brand-text mx-3">{{ $global["app_name"] }}</div>
             </a>
@@ -69,7 +69,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
+                    {{-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -80,7 +80,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -117,7 +117,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth()->user()->name }}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="/admin/img/undraw_profile.svg">
+                                    src="/krt/public/admin/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -199,21 +199,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="/admin/vendor/jquery/jquery.min.js"></script>
-    <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/krt/public/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="/krt/public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/krt/public/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="/admin/js/sb-admin-2.min.js"></script>
+    <script src="/krt/public/admin/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/krt/public/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/krt/public/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="/admin/js/demo/datatables-demo.js"></script>
+    <script src="/krt/public/admin/js/demo/datatables-demo.js"></script>
 
     <!-- Custom dataTable plugin -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

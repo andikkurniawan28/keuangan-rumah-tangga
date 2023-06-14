@@ -80,11 +80,19 @@ class User extends Authenticatable
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect("login");
+        return redirect()->route("login");
     }
 
     public function role(){
         return $this->belongsTo(Role::class);
+    }
+
+    public function expenditure(){
+        return $this->belongsTo(Expenditure::class);
+    }
+
+    public function income(){
+        return $this->belongsTo(Income::class);
     }
 
     protected static function booted(): void

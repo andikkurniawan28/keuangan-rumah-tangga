@@ -5,10 +5,12 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ActivityLogController;
+use App\Http\Controllers\ExpenditureController;
 use App\Http\Controllers\UserActivationController;
 
 
@@ -24,6 +26,8 @@ Route::resource("menu", MenuController::class)->middleware(["auth", "ensure.perm
 Route::resource("role", RoleController::class)->middleware(["auth", "ensure.permission"]);
 Route::resource("permission", PermissionController::class)->middleware(["auth", "ensure.permission"]);
 Route::resource("user", UserController::class)->middleware(["auth", "ensure.permission"]);
+Route::resource("expenditure", ExpenditureController::class)->middleware(["auth", "ensure.permission"]);
+Route::resource("income", IncomeController::class)->middleware(["auth", "ensure.permission"]);
 
 Route::get("setting", [SettingController::class, "index"])->name("setting.index")->middleware(["auth", "ensure.permission"]);
 Route::post("setting", [SettingController::class, "process"])->name("setting.process")->middleware(["auth", "ensure.permission"]);
